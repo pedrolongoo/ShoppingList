@@ -1,4 +1,4 @@
-package pedro.personalprojects.myapplication
+package pedro.personalprojects.ShoppingList
 
 import org.junit.Test
 
