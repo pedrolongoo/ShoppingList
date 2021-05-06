@@ -4,9 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
 
-@Entity(tableName = "items",
-        foreignKeys = arrayOf(
-            ForeignKey(entity = ShoppingList::class, parentColumns = arrayOf("id"), childColumns = arrayOf("listId"), onDelete = ForeignKey.CASCADE)))
+@Entity(tableName = "items")
 data class Item(
     val listId: Int,
     val itemName: String,

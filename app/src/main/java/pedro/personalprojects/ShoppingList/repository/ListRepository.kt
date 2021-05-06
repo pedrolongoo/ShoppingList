@@ -11,7 +11,7 @@ class ListRepository {
     private val dao = ShoppingListDB.instance.ShoppingListDAO()
 
     suspend fun save(shoppingList: RegisterListDto){
-        val entity = ShoppingList(shoppingList.date, shoppingList.name)
+        val entity = ShoppingList(shoppingList.name, shoppingList.date)
         dao.save(entity)
     }
 
