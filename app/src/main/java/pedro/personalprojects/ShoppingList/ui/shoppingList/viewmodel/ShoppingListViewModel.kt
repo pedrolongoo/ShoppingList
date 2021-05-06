@@ -1,4 +1,4 @@
-package pedro.personalprojects.ShoppingList.ui.productList.viewmodel
+package pedro.personalprojects.ShoppingList.ui.shoppingList.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

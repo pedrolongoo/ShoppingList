@@ -1,4 +1,4 @@
-package pedro.personalprojects.ShoppingList.ui.productList.adapter
+package pedro.personalprojects.ShoppingList.ui.shoppingList.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,6 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import pedro.personalprojects.ShoppingList.R
 import pedro.personalprojects.ShoppingList.databinding.ItemListBinding
-import pedro.personalprojects.ShoppingList.databinding.ItemProductBinding
 import pedro.personalprojects.ShoppingList.dto.list.ListDto
 
 class ShoppingListAdapter : RecyclerView.Adapter<ShoppingListAdapter.ShoppingListViewHolder>() {

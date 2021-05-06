@@ -8,6 +8,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:id="@+id/rvItems"
         android:layout_height="match_parent"
         tools:layout_editor_absoluteX="283dp"
         tools:layout_editor_absoluteY="113dp" />

@@ -6,4 +6,4 @@ data class ListDto(
     val id: Int,
     val name: String,
     val date: String
-)
+) : Serializable

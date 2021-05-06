@@ -1,6 +1,5 @@
-package pedro.personalprojects.ShoppingList.ui.productList
+package pedro.personalprojects.ShoppingList.ui.shoppingList
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -12,8 +11,10 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import pedro.personalprojects.ShoppingList.R
 import pedro.personalprojects.ShoppingList.databinding.ActivityShoppingListBinding
-import pedro.personalprojects.ShoppingList.ui.productList.adapter.ShoppingListAdapter
-import pedro.personalprojects.ShoppingList.ui.productList.viewmodel.ShoppingListViewModel
+import pedro.personalprojects.ShoppingList.dto.list.ListDto
+import pedro.personalprojects.ShoppingList.ui.listItem.contract.ItemShoppingContract
+import pedro.personalprojects.ShoppingList.ui.shoppingList.adapter.ShoppingListAdapter
+import pedro.personalprojects.ShoppingList.ui.shoppingList.viewmodel.ShoppingListViewModel
 import pedro.personalprojects.ShoppingList.ui.registerList.RegisterListActivity
 
 class ShoppingListActivity: AppCompatActivity() {
@@ -36,7 +37,7 @@ class ShoppingListActivity: AppCompatActivity() {
 
     private fun setupList() {
         adapter = ShoppingListAdapter()
-//        adapter.onItemSelected = ::onMedicineSelected
+        adapter.onItemSelected = ::onListSelected
 
         binding.rvShoppingList.adapter = adapter
         binding.rvShoppingList.layoutManager = LinearLayoutManager(this)
@@ -45,6 +46,14 @@ class ShoppingListActivity: AppCompatActivity() {
                 this, DividerItemDecoration.VERTICAL
             )
         )
+    }
+
+    private fun onListSelected(list: ListDto) {
+        itemResult.launch(list)
+    }
+
+    private val itemResult = registerForActivityResult(ItemShoppingContract()) {
+        viewModel.listAll()
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

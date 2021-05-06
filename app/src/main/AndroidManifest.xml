@@ -10,9 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ShoppingList">
-        <activity android:name=".ui.registerList.RegisterListActivity">
-        </activity>
-        <activity android:name=".ui.productList.ShoppingListActivity">
+        <activity android:name=".ui.registerList.RegisterListActivity"></activity>
+        <activity android:name=".ui.listItem.ItemShoppingActivity"></activity>
+        <activity android:name=".ui.registerItemList.RegisterItemShoppingActivity"></activity>
+
+        <activity android:name=".ui.shoppingList.ShoppingListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
